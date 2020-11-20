@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SpaceX Project</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+  <body>
+      <h1>SpaceX Launch programs</h1>
+      <div class="display-flex">
+         <aside class="flex-1 mr-20 rounded-borders">
+            <h2 class="aside-heading">Filters</h2>
+            <div class="launch-year-section">
+               <p class="year-heading">Launch Year</p>
+            </div>
+            <div class="button-section">
+                <button class="btn btn-launchYear" onclick="filterByLaunchYear('2006')">2006</button>
+                <button class="btn  btn-launchYear" onclick="filterByLaunchYear('2007')" >2007</button>
+            </div>
+            <div class="button-section">
+                <button class="btn  btn-launchYear" onclick="filterByLaunchYear('2008')">2008</button>
+                <button class="btn  btn-launchYear" onclick="filterByLaunchYear('2009')">2009</button>
+            </div>
+            <div class="button-section">
+                <button class="btn  btn-launchYear" onclick="filterByLaunchYear('2010')">2010</button>
+                <button class="btn  btn-launchYear" onclick="filterByLaunchYear('2011')">2011</button>
+            </div>
+            <div class="button-section">
+                <button class="btn  btn-launchYear" onclick="filterByLaunchYear('2012')">2012</button>
+                <button class="btn  btn-launchYear" onclick="filterByLaunchYear('2013')">2013</button>
+            </div>
+            <div class="button-section">
+                <button class="btn btn-launchYear" onclick="filterByLaunchYear('2014')">2014</button>
+                <button class="btn btn-launchYear"  onclick="filterByLaunchYear('2015')">2015</button>
+            </div>
+            <div class="button-section">
+                <button class="btn btn-launchYear"  onclick="filterByLaunchYear('2016')">2016</button>
+                <button class="btn btn-launchYear"  onclick="filterByLaunchYear('2017')">2017</button>
+            </div>
+            <div class="button-section">
+                <button class="btn btn-launchYear"  onclick="filterByLaunchYear('2018')">2018</button>
+                <button class="btn btn-launchYear"  onclick="filterByLaunchYear('2019')">2019</button>
+            </div>
+            <div class="button-section">
+                <button class="btn btn-launchYear"  onclick="filterByLaunchYear('2020')">2020</button>
+            </div>
+    
+            <div class="launch-year-section">
+                <p class="year-heading">Successful Launch</p>
+             </div>
+             <div class="button-section">
+                 <button class="btn " onclick="filterByLaunchYear('', true)">True</button>
+                 <button class="btn " onclick="filterByLaunchYear('', false)">False</button>
+             </div>
+             <div class="launch-year-section">
+                <p class="year-heading">Successful Landing</p>
+             </div>
+             <div class="button-section">
+                 <button class="btn ">True</button>
+                 <button class="btn ">False</button>
+             </div>
+         </aside>
+             <!-- /List of data -->
+          <section class="flez-4">
+              <div class="center" id="loading"><h2>Loading...</h2></div>
+            <div id="rocketLaunches" class="contain-row">
+    
+            </div>
+          </section>
+               
+         
+       </div>
+      
+    <script src="scripts/index.js" ></script>
+   </body>
+</html>
