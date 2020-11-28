@@ -37,10 +37,10 @@ aside{
 }
 .button-section{
     display: flex;
-    display: -webkit-box;
+    /* display: -webkit-box; */
     display: -ms-flexbox;
     justify-content: space-between;
-    -webkit-box-pack: justify!important;
+    /* -webkit-box-pack: justify!important; */
     -ms-flex-pack: justify!important;
     width: 88%;
     margin: 0 auto;
@@ -55,37 +55,9 @@ aside{
     font-weight: 500;
 }
 
-/* .display-flex{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-.justify-between{
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
- }
- .wrap-flex{
-     -ms-flex-wrap: wrap!important;
-     flex-wrap: wrap!important;
-  }
-  .contain-row{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-   
-   
-  }
-  .column-3{
-    width: 25%;
-  }
-  .column-9{
-    width: 75%;
-  } */
   .contain-row {
     display: flex;
-    display: -webkit-box;
+    /* display: -webkit-box; */
     display: -ms-flexbox;
     flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -150,7 +122,7 @@ ul{
         -ms-flex:  0 0 28%;        
     }
     .display-flex{
-        display: -webkit-box;
+        /* display: -webkit-box; */
         display: -ms-flexbox;
         display: flex;
     }
