@@ -12,6 +12,7 @@ function renderHtml(spaceData){
             </ul>
             <p class="bold">Launch Year: ${station.launch_year}</p>
             <p class="bold">Successful Launch: ${station.launch_success}</p>
+            <p class="bold">Successful Landing: ${station.land_success ? station.land_success : 'NA' }</p>
 
         `);
 
@@ -20,32 +21,48 @@ function renderHtml(spaceData){
     )
 
 }
+
 document.addEventListener("DOMContentLoaded", function() {
+    selectedYears = [];
+    apiUrl = 'https://api.spaceXdata.com/v3/launches?limit=100';
     const loaderText = document.getElementById("loading");
     loaderText.style.display = "block";
     // Your code to run since DOM is loaded and ready
-    fetch("https://api.spaceXdata.com/v3/launches?limit=100")
+    fetch(apiUrl)
         .then(res => res.json())
         .then(spaceData => {
+            console.log(spaceData);
             loaderText.style.display = "none";
             renderHtml(spaceData)
          });
 });
 
 
-function filterByLaunchYear(launchYear = '', launchSuccess = ''){
+function filterByLaunchYear(event, launchYear = '', launchSuccess = '', landingSuccess = ''){
+    if(launchYear){
+        if (selectedYears.indexOf(launchYear) === -1) {
+            selectedYears.push(launchYear);
+          }
+          else {
+            selectedYears.indexOf(launchYear) !== -1 && selectedYears.splice(selectedYears.indexOf(launchYear), 1)
+          }
+    }
+    event.classList.toggle('btn-active');
     const loaderText = document.getElementById("loading");
     const params = new URLSearchParams({
-        launch_year: launchYear,
-        launch_success: launchSuccess,
+        launch_year: selectedYears,
+        launch_success: (launchSuccess !== '') ? launchSuccess : '',
+        land_success: (landingSuccess !== '') ? landingSuccess : '',
       });
     const rocketLaunches = document.getElementById('rocketLaunches');
     rocketLaunches.innerHTML = "";
     loaderText.style.display = "block";
-    fetch(`https://api.spaceXdata.com/v3/launches?limit=100&${params}`)
+    fetch(`${apiUrl}&${params}`)
     .then(res => res.json())
     .then(spaceData => {
         loaderText.style.display = "none";
         renderHtml(spaceData)
      });
 }
+
+ 

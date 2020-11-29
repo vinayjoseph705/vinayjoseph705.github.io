@@ -110,8 +110,11 @@ ul li {
 ul{
     padding-left: 0;
 }
-.btn:focus{
+.btn-active{
     background: #7cba01;
+}
+.button-bg{
+    background-color: green;
 }
 
 
