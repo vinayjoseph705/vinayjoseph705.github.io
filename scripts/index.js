@@ -12,7 +12,7 @@ function renderHtml(spaceData){
             </ul>
             <p class="bold">Launch Year: ${station.launch_year}</p>
             <p class="bold">Successful Launch: ${station.launch_success}</p>
-            <p class="bold">Successful Landing: ${station.land_success ? station.land_success : 'NA' }</p>
+            <p class="bold">Successful Landing: ${(station.rocket.first_stage.cores[0].land_success)}</p>
 
         `);
 

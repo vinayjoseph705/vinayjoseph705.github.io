@@ -72,8 +72,8 @@ aside{
   }
   /* Create four equal columns */
   .column {
-    flex: 21%;
-    -ms-flex:  0 0 21%;        
+    flex: 26%;
+    -ms-flex:  0 0 26%;        
     margin: 0 20px 20px 0;
     background: #fff;
     padding: 20px;
@@ -160,6 +160,14 @@ ul{
     .flex-1{
         flex: 0 0 16%;
         -ms-flex:  0 0 16%;
+
+    }
+    
+   }
+   @media (min-width: 1525px) {
+    .flex-1{
+        flex: 0 0 17%;
+        -ms-flex:  0 0 17%;
 
     }
     
