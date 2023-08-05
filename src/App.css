@@ -1,0 +1,11 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
